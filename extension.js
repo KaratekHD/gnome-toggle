@@ -22,7 +22,7 @@ function enable() {
     } else {
         this.themeMenu = new PopupMenu.PopupSubMenuMenuItem("Appearance", true);
         this.mainMenu.addMenuItem(themeMenu, 8);
-        this.themeMenu.icon.icon_name = "weather-clear-symbolic";
+        this.themeMenu.icon.icon_name = "weather-overcast-symbolic";
     }
 
     this.light = new PopupMenu.PopupMenuItem("Light");
