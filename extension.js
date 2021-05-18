@@ -10,12 +10,12 @@ function enable() {
     this.mainMenu = Main.panel.statusArea['aggregateMenu'].menu;
 
     // create theme menu, according to theme.
-    const color = Util.trySpawn(["dconf", "read", "/org/gnome/desktop/interface/gtk-theme"]);
-    if (color === "Adwaita") {
+    /* var color = Util.trySpawn(["dconf", "read", "/org/gnome/desktop/interface/gtk-theme"]);
+    if(color === "'Adwaita'") {
         this.themeMenu = new PopupMenu.PopupSubMenuMenuItem("Light Appearance", true);
         this.mainMenu.addMenuItem(themeMenu, 8);
         this.themeMenu.icon.icon_name = "weather-clear-symbolic";
-    } else if (color === "Adwaita-dark") {
+    } else if (color === "'Adwaita-dark'") {
         this.themeMenu = new PopupMenu.PopupSubMenuMenuItem("Dark Appearance", true);
         this.mainMenu.addMenuItem(themeMenu, 8);
         this.themeMenu.icon.icon_name = "weather-clear-night-symbolic";
@@ -23,7 +23,11 @@ function enable() {
         this.themeMenu = new PopupMenu.PopupSubMenuMenuItem("Appearance", true);
         this.mainMenu.addMenuItem(themeMenu, 8);
         this.themeMenu.icon.icon_name = "weather-overcast-symbolic";
-    }
+    } */
+    
+    this.themeMenu = new PopupMenu.PopupSubMenuMenuItem("Appearance", true);
+    this.mainMenu.addMenuItem(themeMenu, 8);
+    this.themeMenu.icon.icon_name = "weather-overcast-symbolic";
 
     this.light = new PopupMenu.PopupMenuItem("Light");
     this.light.connect('activate', (item, event) => {
@@ -44,11 +48,12 @@ function enable() {
     this.reset_ornament();
 
     // dotty dots that match theme on startup
-    if (color === "Adwaita") {
+    /* var color = Util.trySpawn(["dconf", "read", "/org/gnome/desktop/interface/gtk-theme"]); // it aint really work without this
+    if (color === "'Adwaita'") {
         this.light.setOrnament(Ornament.DOT);
-    } else if (color === "Adwaita-dark") {
+    } else if (color === "'Adwaita-dark'") {
         this.dark.setOrnament(Ornament.DOT);
-    }
+    } */
 }
 
 function set_theme(theme) {
