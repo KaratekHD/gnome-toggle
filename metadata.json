@@ -4,5 +4,6 @@
   "uuid": "gnometoggle@foreverxml.github.io",
   "original-author": "foreverxml@tuta.io",
   "shell-version": ["3.36","3.38","40"],
-  "url": "https://github.com/foreverxml/gnome-toggle"
+  "url": "https://github.com/foreverxml/gnome-toggle",
+  "version": "1.1"
 }
