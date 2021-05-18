@@ -56,19 +56,15 @@ function reset_ornament() {
     this.dark.setOrnament(Ornament.NONE);
 }
 
+function destroyobj(a) {
+    if (a) {
+        a.destroy();
+        a = 0;
+    }
+}
+
 function disable() {
-    if (this.light) {
-        this.light.destroy();
-        this.light = 0;
-    }
-
-    if (this.dark) {
-        this.dark.destroy();
-        this.dark = 0;
-    }
-
-    if (this.themeMenu) {
-        this.themeMenu.destroy();
-        this.themeMenu = 0;
-    }
+    destroyobj(this.light);
+    destroyobj(this.dark);
+    destroyonj(this.themeMenu);
 }
