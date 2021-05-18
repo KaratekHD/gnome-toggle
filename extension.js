@@ -67,7 +67,7 @@ function set_theme_label(theme){
 }
 
 function set_user_theme(theme) {
-    Util.trySpawn(["dconf", "write", "/org/gnome/desktop/interface/gtk-theme", "'" + theme +"'"]);
+    Util.trySpawn(["dconf", "write", "/org/gnome/desktop/interface/gtk-theme", "'" + theme + "'"]);
 }
 
 function reset_ornament() {
