@@ -3,7 +3,7 @@
   "description": "Turn on your GNOME dark mode!",
   "uuid": "gnometoggle@foreverxml.github.io",
   "original-author": "foreverxml@tuta.io",
-  "shell-version": ["3.36","3.38","40"],
+  "shell-version": ["3.36","3.38","40","41"],
   "url": "https://github.com/foreverxml/gnome-toggle",
   "version": "1.1"
 }
